@@ -92,7 +92,7 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 alias imgls=~/.iterm2/imgls;
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-REACT_EDITOR=code-insiders
+REACT_EDITOR="code-insiders"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
