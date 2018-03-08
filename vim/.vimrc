@@ -61,6 +61,7 @@ set nocompatible
 " Syntax highlighting {{{
 set t_Co=256
 set background=dark
+
 syntax on
 
 " NORD them settings
@@ -75,7 +76,7 @@ let mapleader=","
 " }}}
 
 " Local directories {{{
-" set backupdir=expand(~/.vim/backups)
+set backupdir=expand(~/.vim/backups)
 " set directory=expand(~/.vim/swaps)
 " set undodir=expand(~/.vim/undo)
 " }}}
@@ -210,17 +211,6 @@ augroup general_config
   command! W write
   " }}}
 
-  " Better mark jumping (line + col) {{{
-  nnoremap ' `
-  " }}}
-
-  " Hard to type things {{{
-  iabbrev >> →
-  iabbrev << ←
-  iabbrev ^^ ↑
-  iabbrev VV ↓
-  iabbrev aa λ
-  " }}}
 
   " Toggle show tabs and trailing spaces (,c) {{{
   set lcs=tab:›\ ,trail:·,eol:¬,nbsp:_
@@ -233,39 +223,12 @@ augroup general_config
   " map <silent> <leader>qs <Esc>:let @/ = ""<CR>
   " }}}
 
-  " Vim on the iPad {{{
-  if &term == "xterm-ipad"
-    nnoremap <Tab> <Esc>
-    vnoremap <Tab> <Esc>gV
-    onoremap <Tab> <Esc>
-    inoremap <Tab> <Esc>`^
-    inoremap <Leader><Tab> <Tab>
-  endif
-  " }}}
-
-  " Remap keys for auto-completion menu {{{
-  inoremap <expr> <CR>   pumvisible() ? "\<C-y>" : "\<CR>"
-  inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
-  inoremap <expr> <Up>   pumvisible() ? "\<C-p>" : "\<Up>"
-  " }}}
 
   " Paste toggle (,p) {{{
   set pastetoggle=<leader>p
   map <leader>p :set invpaste paste?<CR>
   " }}}
 
-  " Yank from cursor to end of line {{{
-  nnoremap Y y$
-  " }}}
-
-  " Insert newline {{{
-  map <leader><Enter> o<ESC>
-  " }}}
-
-  " Search and replace word under cursor (,*) {{{
-  nnoremap <leader>* :%s/\<<C-r><C-w>\>//<Left>
-  vnoremap <leader>* "hy:%s/\V<C-r>h//<left>
-  " }}}
 
   " Strip trailing whitespace (,ss) {{{
   function! StripWhitespace () " {{{
@@ -276,10 +239,6 @@ augroup general_config
     call setreg('/', old_query)
   endfunction " }}}
   noremap <leader>ss :call StripWhitespace ()<CR>
-  " }}}
-
-  " Join lines and restore cursor location (J) {{{
-  nnoremap J mjJ`j
   " }}}
 
   " Toggle folds (<Space>) {{{
