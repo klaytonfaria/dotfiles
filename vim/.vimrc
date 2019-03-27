@@ -37,6 +37,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'slim-template/vim-slim', { 'for': 'slim' }
+Plug 'swdotcom/swdc-vim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
