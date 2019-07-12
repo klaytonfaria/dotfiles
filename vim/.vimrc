@@ -37,7 +37,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'slim-template/vim-slim', { 'for': 'slim' }
-Plug 'swdotcom/swdc-vim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -47,7 +46,6 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
-Plug 'vim-scripts/fish.vim',   { 'for': 'fish' }
 Plug 'vim-scripts/jade.vim',   { 'for': 'jade' }
 Plug 'wavded/vim-stylus',      { 'for': 'stylus' }
 Plug 'wlangstroth/vim-racket'
@@ -75,7 +73,7 @@ syntax on
 let g:nord_italic_comments = 1
 let g:nord_uniform_status_lines = 1
 let g:nord_uniform_diff_background = 1
-colorscheme nord
+ colorscheme nord
 " }}}
 
 " Mapleader {{{
@@ -83,7 +81,7 @@ let mapleader=","
 " }}}
 
 " Local directories {{{
-set backupdir=expand(~/.vim/backups)
+" set backupdir=expand(~/.vim/backups)
 " set directory=expand(~/.vim/swaps)
 " set undodir=expand(~/.vim/undo)
 " }}}
